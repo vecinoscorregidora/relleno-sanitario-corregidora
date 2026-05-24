@@ -2,3 +2,10 @@ node_modules
 dist
 .DS_Store
 *.log
+
+# Original PDFs (copies in public/pdfs/ are the canonical versions)
+/Documento (78).pdf
+/02 FSO 3 - MODIFICACION DE SOCIOS.pdf
+/03 FSO 3 - MODIIFICACION DE OBJETO SOCIAL Y AUMENTO DE CAPITAL.pdf
+/Gaceta_No_1_Tomo_I_del_31_de_enero_de_2025 (1).pdf
+/index.html
