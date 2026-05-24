@@ -25,10 +25,10 @@
 
 <script setup>
 const docs = [
-  { icon: '📄', title: 'Constitución de FSO 3 SA de CV', meta: 'Abr 2019 | RPC', href: '/relleno-corregidora/pdfs/01-constitucion-fso3.pdf' },
-  { icon: '📄', title: 'Modificación de Socios', meta: '4 Mar 2024 | Ordinaria', href: '/relleno-corregidora/pdfs/02-modificacion-socios.pdf' },
-  { icon: '📄', title: 'Cambio de Objeto Social y Aumento de Capital', meta: '12 Mar 2024 | Extraordinaria', href: '/relleno-corregidora/pdfs/03-cambio-objeto-social-aumento-capital.pdf' },
-  { icon: '📄', title: 'Gaceta Municipal de Corregidora', meta: '31 Ene 2025 | Tomo I', href: '/relleno-corregidora/pdfs/04-gaceta-municipal-corregidora-ene2025.pdf' },
+  { icon: '📄', title: 'Constitución de FSO 3 SA de CV', meta: 'Abr 2019 | RPC', href: '/relleno-sanitario-corregidora/pdfs/01-constitucion-fso3.pdf' },
+  { icon: '📄', title: 'Modificación de Socios', meta: '4 Mar 2024 | Ordinaria', href: '/relleno-sanitario-corregidora/pdfs/02-modificacion-socios.pdf' },
+  { icon: '📄', title: 'Cambio de Objeto Social y Aumento de Capital', meta: '12 Mar 2024 | Extraordinaria', href: '/relleno-sanitario-corregidora/pdfs/03-cambio-objeto-social-aumento-capital.pdf' },
+  { icon: '📄', title: 'Gaceta Municipal de Corregidora', meta: '31 Ene 2025 | Tomo I', href: '/relleno-sanitario-corregidora/pdfs/04-gaceta-municipal-corregidora-ene2025.pdf' },
 ]
 const sources = [
   { title: 'Relleno sanitario en Corregidora cumple con normas federales', url: 'https://www.alertaqronoticias.com/2026/04/23/relleno-sanitario-en-corregidora-cumple-con-normas-federales-y-tiene-permisos-vigentes-afirman-autoridades/', source: 'AlertaQro', date: '23 Abr 2026' },

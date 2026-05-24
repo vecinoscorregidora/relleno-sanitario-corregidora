@@ -19,17 +19,17 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: relleno-corregidora
+        working-directory: relleno-sanitario-corregidora
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: relleno-corregidora/package-lock.json
+          cache-dependency-path: relleno-sanitario-corregidora/package-lock.json
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: relleno-corregidora/dist
+          path: relleno-sanitario-corregidora/dist
       - uses: actions/deploy-pages@v4

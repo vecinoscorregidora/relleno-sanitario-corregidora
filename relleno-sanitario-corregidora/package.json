@@ -1,8 +1,8 @@
 {
-  "name": "relleno-corregidora",
+  "name": "relleno-sanitario-corregidora",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://vecinoscorregidora.github.io/relleno-corregidora",
+  "homepage": "https://vecinoscorregidora.github.io/relleno-sanitario-corregidora",
   "type": "module",
   "scripts": {
     "dev": "vite",
