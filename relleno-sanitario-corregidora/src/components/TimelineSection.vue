@@ -1,21 +1,25 @@
 <template>
-  <section id="cronologia">
-    <span class="text-xs font-bold tracking-[0.15em] uppercase text-amber-600 dark:text-amber-500">Cronología</span>
-    <h2 class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-tight mt-2 mb-6 text-gray-900 dark:text-gray-100">Línea de tiempo del caso</h2>
+  <section id="cronologia" class="py-12 sm:py-16">
+    <span class="inline-flex items-center gap-2 text-[0.65rem] font-bold tracking-[0.2em] uppercase text-blue-700 dark:text-blue-400 mb-4">
+      <Clock class="w-3.5 h-3.5" />
+      Cronología
+    </span>
+    <h2 class="font-display text-[clamp(2rem,5vw,3.2rem)] font-bold leading-tight tracking-[-0.02em] text-gray-900 dark:text-gray-50 mb-8 max-w-3xl">
+      Línea de tiempo del caso
+    </h2>
 
-    <div class="relative pl-10 before:content-[''] before:absolute before:left-[11px] before:top-1 before:bottom-0 before:w-[2px] before:bg-gray-200 dark:before:bg-gray-700">
-      <div v-for="(e, i) in events" :key="i" class="relative mb-8 pl-4 before:content-[''] before:absolute before:-left-[34px] before:top-[6px] before:w-[14px] before:h-[14px] before:rounded-full before:border-2 before:border-amber-600 dark:before:border-amber-500" :class="isDark ? 'before:bg-surface' : 'before:bg-white'">
-        <div class="text-xs font-bold tracking-wider uppercase text-amber-600 dark:text-amber-500 mb-1">{{ e.date }}</div>
-        <h3 class="font-display text-lg font-bold text-gray-900 dark:text-gray-100 mb-1">{{ e.title }}</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 max-w-lg">{{ e.desc }}</p>
+    <div class="relative pl-10 before:content-[''] before:absolute before:left-[15px] before:top-2 before:bottom-0 before:w-[2px] before:bg-gray-200 dark:before:bg-gray-800">
+      <div v-for="(e, i) in events" :key="i" class="relative mb-10 pl-5 before:content-[''] before:absolute before:-left-[25px] before:top-[6px] before:w-[10px] before:h-[10px] before:rounded-full before:bg-blue-700 dark:before:bg-blue-400 before:ring-2 before:ring-white dark:before:ring-gray-950">
+        <div class="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-blue-700 dark:text-blue-400 mb-1">{{ e.date }}</div>
+        <h3 class="font-display text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">{{ e.title }}</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 max-w-lg leading-relaxed">{{ e.desc }}</p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { useDark } from '@vueuse/core'
-const isDark = useDark()
+import { Clock } from '@lucide/vue'
 const events = [
   { date: 'Abr 2019', title: 'Constitución de FSO 3 SA de CV', desc: 'Se constituye en Querétaro con objeto social de servicios de agua. Capital: $60,000. Socios: Urquiza, Cofiño, García Ibarra (33.3% c/u).' },
   { date: 'Feb 2024', title: 'Incendio en relleno "El Paraíso"', desc: 'Incendio de casi dos semanas consume el relleno que operaba desde 2007. El municipio anuncia que no renovará la concesión.' },

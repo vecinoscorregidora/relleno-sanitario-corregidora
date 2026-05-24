@@ -1,19 +1,28 @@
 <template>
-  <section id="preguntas">
-    <span class="text-xs font-bold tracking-[0.15em] uppercase text-amber-600 dark:text-amber-500">Líneas de Investigación</span>
-    <h2 class="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-tight mt-2 mb-4 text-gray-900 dark:text-gray-100">Preguntas que siguen abiertas</h2>
-    <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mb-8 leading-relaxed">Esta investigación documenta lo que está a la vista. Pero hay preguntas que requieren más indagación:</p>
+  <section id="preguntas" class="py-12 sm:py-16">
+    <span class="inline-flex items-center gap-2 text-[0.65rem] font-bold tracking-[0.2em] uppercase text-blue-700 dark:text-blue-400 mb-4">
+      <Search class="w-3.5 h-3.5" />
+      Líneas de Investigación
+    </span>
+    <h2 class="font-display text-[clamp(2rem,5vw,3.2rem)] font-bold leading-tight tracking-[-0.02em] text-gray-900 dark:text-gray-50 mb-4 max-w-3xl">
+      Preguntas que siguen abiertas
+    </h2>
+    <p class="text-lg text-gray-500 dark:text-gray-400 max-w-3xl mb-8 leading-relaxed">Esta investigación documenta lo que está a la vista. Pero hay preguntas que requieren más indagación:</p>
 
     <div class="space-y-3">
-      <div v-for="(q, i) in questions" :key="i" class="flex gap-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 p-5 rounded-box items-start">
-        <span class="font-display text-xl font-black text-amber-600 dark:text-amber-500 leading-none shrink-0">{{ String(i + 1).padStart(2, '0') }}</span>
-        <p class="text-sm text-gray-500 dark:text-gray-400"><strong class="block text-gray-900 dark:text-gray-100 font-medium mb-1">{{ q.q }}</strong>{{ q.detail }}</p>
+      <div v-for="(q, i) in questions" :key="i" class="flex gap-4 border border-gray-200 dark:border-gray-800 p-5 rounded-xl items-start bg-gray-50/50 dark:bg-gray-900/30 hover:border-blue-200 dark:hover:border-blue-800 transition-colors">
+        <span class="font-display text-xl font-bold text-blue-700 dark:text-blue-400 leading-none shrink-0 w-8">{{ String(i + 1).padStart(2, '0') }}</span>
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100 text-sm mb-1">{{ q.q }}</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{{ q.detail }}</p>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { Search } from '@lucide/vue'
 const questions = [
   { q: '¿Quién autorizó el cambio de uso de suelo?', detail: 'El terreno requería autorización de cambio de uso de suelo. ¿Qué dependencia lo aprobó y con base en qué estudios?' },
   { q: '¿Hay relación entre la llegada de Kikey Velasco y la concesión?', detail: 'Entró a FSO 3 el 4 mar 2024. Ocho días después, la empresa cambió su objeto a residuos. ¿Sabía ya de la oportunidad de negocio?' },
