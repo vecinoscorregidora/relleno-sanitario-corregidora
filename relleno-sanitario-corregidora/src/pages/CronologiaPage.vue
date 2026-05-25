@@ -38,9 +38,18 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Cronología del caso — Relleno Sanitario Corregidora',
+  description: 'Línea de tiempo completa del conflicto del relleno sanitario en Corregidora: desde la creación de FSO 3 en 2019 hasta la clausura en mayo 2026.',
+  og: { title: 'Cronología — Relleno Sanitario Corregidora', description: '15 eventos clave documentados sobre el relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/cronologia' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/cronologia',
+  schema: { '@context': 'https://schema.org', '@type': 'Report', headline: 'Cronología del caso', description: 'Línea de tiempo del conflicto del relleno sanitario en Corregidora', datePublished: '2026-05-24' }
+}))
 const base = import.meta.env.BASE_URL
-const clausuraImg = `${base}images/clausura-relleno-sanitario.jpeg`
-const clausuraImg2 = `${base}images/cluasura-relleno-sanitario-1.jpeg`
+const clausuraImg = `${base}images/clausura-relleno-sanitario.webp`
+const clausuraImg2 = `${base}images/cluasura-relleno-sanitario-1.webp`
 const events = [
   { date: '2 Abr 2019', title: 'Constitución de FSO 3 SA de CV', desc: 'Se constituye en Querétaro ante el notario Sergio Zepeda Guerra. Objeto social: servicios de agua potable, drenaje y saneamiento. Capital social: $60,000 MXN. Socios fundadores: José Rodrigo Urquiza Escobar, Salvador Cofiño Dávila y Alejandro García Ibarra (33.3% c/u).', source: 'Acta constitutiva — RPC Querétaro' },
   { date: '4 Feb 2024', title: 'Incendio en relleno sanitario "El Paraíso"', desc: 'Un incendio de casi dos semanas consume el relleno sanitario que operaba en Corregidora desde 2007. El fuego requiere intervención federal, estatal y municipal para ser sofocado.', source: 'Publimetro — 20 Feb 2024' },

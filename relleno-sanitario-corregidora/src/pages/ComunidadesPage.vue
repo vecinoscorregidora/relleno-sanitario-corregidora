@@ -11,18 +11,18 @@
 
     <!-- Invitacion a la Jornada Recorregidora -->
     <figure class="mb-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-      <img :src="invitacionImg" alt="Invitacion a la Jornada Recorregidora en el Foro Multicultural de Candiles, 20 de mayo de 2026" class="w-full h-auto object-contain max-h-96 mx-auto" loading="lazy" />
+      <img :src="invitacionImg" alt="Invitación a la Jornada Recorregidora en el Foro Multicultural de Candiles, 20 de mayo de 2026, donde el presidente municipal prometió asistir pero no lo hizo" class="w-full h-auto object-contain max-h-96 mx-auto" loading="lazy" />
       <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Invitacion a la Jornada Recorregidora donde el presidente municipal prometio asistir — 20 de mayo de 2026</figcaption>
     </figure>
 
     <!-- Fotos de los sellos de clausura -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg" alt="Sellos de clausura colocados en el acceso al relleno sanitario de Corregidora" class="w-full h-64 object-cover" loading="lazy" />
+        <img :src="clausuraImg" alt="Sellos de clausura colocados en el acceso al relleno sanitario de Corregidora por los regidores municipales el 21 de mayo de 2026" class="w-full h-64 object-cover" loading="lazy" />
         <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos de clausura en el acceso al relleno — 21 de mayo de 2026</figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg2" alt="Vista general del relleno sanitario clausurado en Praderas de La Loma" class="w-full h-64 object-cover" loading="lazy" />
+        <img :src="clausuraImg2" alt="Vista general del relleno sanitario clausurado en Praderas de La Loma, Corregidora, durante la inspección de los regidores el 21 de mayo de 2026" class="w-full h-64 object-cover" loading="lazy" />
         <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno sanitario durante la inspeccion — 21 de mayo de 2026</figcaption>
       </figure>
     </div>
@@ -88,12 +88,13 @@ import { onMounted, ref } from 'vue'
 import { Heart, AlertTriangle, ListChecks, MapPin, Video } from '@lucide/vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { usePageMeta } from '../composables/usePageMeta.js'
 
 const base = import.meta.env.BASE_URL
 const videoSrc = `${base}video/RellenoSanitarioCorregidora.mp4`
-const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
-const clausuraImg = `${base}images/clausura-relleno-sanitario.jpeg`
-const clausuraImg2 = `${base}images/cluasura-relleno-sanitario-1.jpeg`
+const invitacionImg = `${base}images/recorregidora-invitacion.webp`
+const clausuraImg = `${base}images/clausura-relleno-sanitario.webp`
+const clausuraImg2 = `${base}images/clausura-relleno-sanitario-1.webp`
 const videoExists = ref(true)
 const mapContainer = ref(null)
 
@@ -112,6 +113,12 @@ const reports = [
 ]
 
 onMounted(() => {
+  usePageMeta({
+    title: 'Las comunidades afectadas — Relleno sanitario de Corregidora',
+    description: 'Praderas de La Loma y comunidades aledañas. El relleno sanitario opera a 30 metros de viviendas. Fotos de la clausura, mapa interactivo y video del periodista @elotroqueretaromx.',
+    og: { title: 'Comunidades — Mapa, video y fotos del relleno de Corregidora', description: 'El relleno a 30m de viviendas en Praderas de La Loma. Mapa interactivo, video del periodista y fotos de la clausura.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/comunidades', image: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/images/clausura-relleno-sanitario.webp', twitterCard: 'summary_large_image' },
+    canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/comunidades'
+  })
   const map = L.map('map').setView([20.50678, -100.49628], 14)
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',

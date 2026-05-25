@@ -40,6 +40,14 @@
 
 <script setup>
 import { Search, HelpCircle } from '@lucide/vue'
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Preguntas abiertas — Investigación relleno sanitario Corregidora',
+  description: '8 líneas de investigación abiertas sobre el relleno sanitario de Corregidora: cambio de uso de suelo, concesión municipal, impacto ambiental y más.',
+  og: { title: 'Preguntas abiertas — Relleno sanitario Corregidora', description: '8 preguntas que siguen sin respuesta sobre el relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/preguntas' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/preguntas'
+}))
 const questions = [
   { q: '¿Quién autorizó el cambio de uso de suelo?', detail: 'El terreno donde opera el relleno requería autorización de cambio de uso de suelo. ¿Qué dependencia lo aprobó y con base en qué estudios? ¿Hay dictamen del COERET?', priority: 'Alta' },
   { q: '¿Hay relación entre la llegada de Kikey Velasco y la concesión?', detail: 'Kikey Velasco Merino entró a FSO 3 el 4 de marzo de 2024. Ocho días después, la empresa cambió su objeto social a residuos y aumentó su capital 166 veces. ¿Sabía ya de la oportunidad de negocio?', priority: 'Alta' },

@@ -90,8 +90,17 @@
 </template>
 
 <script setup>
+import { Users, User, UserX } from '@lucide/vue'
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Los actores del caso — Relleno sanitario de Corregidora',
+  description: 'Empresarios, regidores, conserteros y autoridades ambientales: el mapa de actores detrás del relleno sanitario de Corregidora, Querétaro.',
+  og: { title: 'Actores — Quién es quién en el caso del relleno de Corregidora', description: '9 perfiles clave identificados en el conflicto del relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/actores' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/actores'
+}))
 const base = import.meta.env.BASE_URL
-const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
+const invitacionImg = `${base}images/Recorregidora-invitacion.webp`
 const empresarios = [
   { role: 'Dueño de FSO 3 / Administrador Único', name: 'José Rodrigo Urquiza Escobar', detail: 'RFC: UUER751004IP0. Copropietario de FSO 3 (50%). Perfil de negocios que abarca agua, desarrollo inmobiliario y clubes privados. Representante legal de FSO 3.' },
   { role: 'Socia / Apoderada Legal de FSO 3', name: 'Kikey Velasco Merino', detail: 'RFC: VEMK871011B82. Abogada, nacida el 11 oct 1987. Entró como socia el 4 mar 2024, 8 días antes del cambio de objeto social a residuos.' },

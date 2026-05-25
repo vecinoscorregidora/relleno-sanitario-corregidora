@@ -58,6 +58,14 @@
 
 <script setup>
 import { FileText, File, FileArchive, Newspaper, ExternalLink, Video } from '@lucide/vue'
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Fuentes y documentos — Relleno sanitario Corregidora',
+  description: 'Documentos oficiales, artículos periodísticos y reportajes audiovisuales sobre el relleno sanitario de Corregidora, Querétaro.',
+  og: { title: 'Fuentes — Documentos del caso del relleno de Corregidora', description: 'PDFs, artículos y reportajes sobre el relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/fuentes' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/fuentes'
+}))
 const base = import.meta.env.BASE_URL
 const docs = [
   { title: 'Constitución de FSO 3 SA de CV', meta: 'Abr 2019 | RPC', href: `${base}pdfs/01-constitucion-fso3.pdf` },

@@ -1,8 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import HeroSection from '../components/HeroSection.vue'
 import CaseSection from '../components/CaseSection.vue'
 import { FileText, Users, Search, Clock, Building2, TriangleAlert, ArrowRightLeft, UserPlus, ArrowRight, Play, FileArchive, Scale, ShieldAlert, Info } from '@lucide/vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Relleno Sanitario Corregidora — Investigación ciudadana',
+  description: 'Investigación sobre el relleno sanitario privado instalado a 30 metros de viviendas en Praderas de La Loma, Corregidora, Querétaro. Documentamos la transformación de FSO 3, los actores clave y la clausura del sitio.',
+  og: { title: 'El relleno de nadie — Investigación sobre el basurero de Corregidora', description: 'Cómo un basurero privado se instaló en medio de comunidades rurales y quiénes están detrás del negocio.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/', image: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/images/clausura-relleno-sanitario.webp', twitterCard: 'summary_large_image', twitterTitle: 'El relleno de nadie — Investigación Corregidora', twitterDescription: 'Basurero privado a 30m de viviendas en Corregidora. Una investigación ciudadana.' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/',
+  schema: { '@context': 'https://schema.org', '@type': 'Report', headline: 'El relleno de nadie', description: 'Investigación sobre el relleno sanitario privado en Corregidora, Querétaro.', datePublished: '2026-05-24', dateModified: '2026-05-24' }
+}))
 const base = import.meta.env.BASE_URL
 const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
 </script>

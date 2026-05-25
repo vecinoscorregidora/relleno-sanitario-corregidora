@@ -14,7 +14,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory('/relleno-sanitario-corregidora/'),
   routes,
-  scrollBehavior() { return { top: 0 } },
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    return new Promise((resolve) => {
+      setTimeout(() => resolve({ top: 0, behavior: 'smooth' }), 100)
+    })
+  },
 })
 
 export default router

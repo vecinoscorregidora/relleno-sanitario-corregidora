@@ -61,7 +61,17 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'Requisitos legales vs realidad — Relleno sanitario Corregidora',
+  description: 'Comparativa de 12 requisitos legales (NOM-083, cambio de uso de suelo, servicios básicos) contra lo que realmente tiene el relleno sanitario de Corregidora.',
+  og: { title: 'Requisitos legales vs realidad del relleno de Corregidora', description: 'De 12 requisitos identificados, 4 no se cumplen: falta luz, agua, teléfono y distancia mínima a viviendas.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/requisitos' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/requisitos'
+}))
 const base = import.meta.env.BASE_URL
+const clausuraImg = `${base}images/clausura-relleno-sanitario.webp`
+const clausuraImg2 = `${base}images/clausura-relleno-sanitario-1.webp`
 const requisitos = [
   { name: 'Cambio de uso de suelo', requisito: 'Autorización del COERET o SEDESU para cambiar el uso del suelo de agrícola/ejidal a industrial/confinamiento de residuos. Se requiere dictamen técnico y aprobación municipal.', realidad: 'No se ha identificado evidencia pública de que el cambio de uso de suelo haya sido autorizado. El predio está en una zona originalmente rural/agrícola.', status: '❓' },
   { name: 'Distancia mínima a viviendas (NOM-083)', requisito: 'La NOM-083-SEMARNAT-2003 exige una distancia mínima de 500 m a centros de población. Dependiendo del tipo de relleno, la distancia puede variar pero nunca es menor a 200 m.', realidad: 'Las viviendas de Praderas de La Loma están a aproximadamente 30 metros del perímetro del relleno. No cumple la norma.', status: '❌' },

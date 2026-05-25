@@ -92,6 +92,14 @@
 
 <script setup>
 import { Building2, Droplets, Trash2, Users, FileSearch, File } from '@lucide/vue'
+import { onMounted } from 'vue'
+import { usePageMeta } from '../composables/usePageMeta.js'
+onMounted(() => usePageMeta({
+  title: 'FSO 3 SA de CV — La empresa detrás del relleno sanitario de Corregidora',
+  description: 'FSO 3 SA de CV pasó de ser una empresa de servicios de agua a una de confinamiento de residuos peligrosos en apenas 8 días. Capital aumentó de $60K a $10M.',
+  og: { title: 'FSO 3 — La transformación de la empresa del relleno', description: 'De servicios de agua a confinamiento de residuos peligrosos: la metamorfosis de FSO 3 SA de CV.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/empresa' },
+  canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/empresa'
+}))
 const isDanger = (item) => item.includes('Confinamiento') || item.includes('Incineración')
 const dataPoints = [
   { num: '$60K', label: 'Capital original (2019)' },
