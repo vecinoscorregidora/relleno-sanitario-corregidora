@@ -1,10 +1,18 @@
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
 export function useScrollReveal() {
-  const observer = ref(null)
+  let observer = null
+  let mutationObserver = null
+
+  function observeElements() {
+    document.querySelectorAll('.reveal:not(.observed)').forEach((el) => {
+      el.classList.add('observed')
+      if (observer) observer.observe(el)
+    })
+  }
 
   onMounted(() => {
-    observer.value = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -15,10 +23,17 @@ export function useScrollReveal() {
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     )
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.value.observe(el))
+    observeElements()
+
+    mutationObserver = new MutationObserver(observeElements)
+    mutationObserver.observe(document.getElementById('app'), {
+      childList: true,
+      subtree: true,
+    })
   })
 
   onUnmounted(() => {
-    observer.value?.disconnect()
+    observer?.disconnect()
+    mutationObserver?.disconnect()
   })
 }
