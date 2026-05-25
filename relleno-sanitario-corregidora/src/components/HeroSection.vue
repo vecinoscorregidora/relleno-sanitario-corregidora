@@ -13,11 +13,6 @@ const isDark = useDark()
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto">
-      <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-[0.65rem] font-bold tracking-[0.2em] uppercase px-4 py-2 mb-8">
-        <span class="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse"></span>
-        Investigación Especial
-      </div>
-
       <h1 class="font-display text-[clamp(2.8rem,8vw,6rem)] font-bold leading-[1.05] tracking-[-0.03em] text-gray-900 dark:text-gray-50 mb-4">
         El relleno <span class="text-blue-700 dark:text-blue-400 italic">de nadie</span>
       </h1>
@@ -38,8 +33,6 @@ const isDark = useDark()
 
       <div class="mt-12 flex gap-6 flex-wrap justify-center text-[0.65rem] font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500">
         <span>24 de mayo, 2026</span>
-        <span class="w-px h-3 bg-gray-300 dark:bg-gray-700"></span>
-        <span>Investigación de interés público</span>
       </div>
     </div>
   </section>

@@ -11,19 +11,31 @@
 
     <!-- Invitacion a la Jornada Recorregidora -->
     <figure class="mb-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-      <img :src="invitacionImg" alt="Invitación a la Jornada Recorregidora en el Foro Multicultural de Candiles, 20 de mayo de 2026, donde el presidente municipal prometió asistir pero no lo hizo" class="w-full h-auto object-contain max-h-96 mx-auto" loading="lazy" />
+      <ImageZoom :src="invitacionImg" alt="Invitación a la Jornada Recorregidora en el Foro Multicultural de Candiles, 20 de mayo de 2026, donde el presidente municipal prometió asistir pero no lo hizo" imgClass="max-h-96 object-contain" />
       <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Invitacion a la Jornada Recorregidora donde el presidente municipal prometio asistir — 20 de mayo de 2026</figcaption>
     </figure>
 
     <!-- Fotos de los sellos de clausura -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg" alt="Sellos de clausura colocados en el acceso al relleno sanitario de Corregidora por los regidores municipales el 21 de mayo de 2026" class="w-full h-64 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos de clausura en el acceso al relleno — 21 de mayo de 2026</figcaption>
+        <ImageZoom :src="clausuraImg" alt="Sellos de clausura colocados en el acceso al relleno sanitario de Corregidora por los regidores municipales el 21 de mayo de 2026" imgClass="h-64 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos de clausura en el acceso al relleno — 21 de mayo de 2026.</figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg2" alt="Vista general del relleno sanitario clausurado en Praderas de La Loma, Corregidora, durante la inspección de los regidores el 21 de mayo de 2026" class="w-full h-64 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno sanitario durante la inspeccion — 21 de mayo de 2026</figcaption>
+        <ImageZoom :src="clausuraImg2" alt="Vista general del relleno sanitario clausurado en Praderas de La Loma, Corregidora, durante la inspección de los regidores el 21 de mayo de 2026" imgClass="h-64 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno sanitario durante la inspeccion — 21 de mayo de 2026.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Fotos del recorrido (Diario de Querétaro) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
+        <ImageZoom :src="recorridoImg1" alt="Vista del relleno sanitario durante el recorrido de los regidores el 21 de mayo de 2026" imgClass="h-56 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante el recorrido de inspeccion. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
+      </figure>
+      <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
+        <ImageZoom :src="recorridoImg2" alt="Otra vista del relleno sanitario de Corregidora durante la inspeccion" imgClass="h-56 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno sanitario. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
       </figure>
     </div>
 
@@ -86,6 +98,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { Heart, AlertTriangle, ListChecks, MapPin, Video } from '@lucide/vue'
+import ImageZoom from '../components/ImageZoom.vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { usePageMeta } from '../composables/usePageMeta.js'
@@ -95,6 +108,8 @@ const videoSrc = `${base}video/RellenoSanitarioCorregidora.mp4`
 const invitacionImg = `${base}images/recorregidora-invitacion.webp`
 const clausuraImg = `${base}images/clausura-relleno-sanitario.webp`
 const clausuraImg2 = `${base}images/clausura-relleno-sanitario-1.webp`
+const recorridoImg1 = `${base}images/recorrido-basurero-av4.webp`
+const recorridoImg2 = `${base}images/recorrido-basurero-av9.webp`
 const videoExists = ref(true)
 const mapContainer = ref(null)
 

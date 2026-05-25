@@ -47,7 +47,7 @@
       <!-- Bloque: Conserteros (operadores políticos) -->
       <div>
         <figure class="mb-3 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 max-w-xs">
-          <img :src="invitacionImg" alt="Invitacion Jornada Recorregidora" class="w-full h-auto object-contain max-h-32 mx-auto" loading="lazy" />
+          <ImageZoom :src="invitacionImg" alt="Invitacion a la Jornada Recorregidora en el Foro Multicultural de Candiles, 20 de mayo de 2026" imgClass="max-h-32 object-contain" />
           <figcaption class="px-3 py-1 text-[0.55rem] text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-800/50">Invitacion al evento del 20 de mayo donde ocurrio el hostigamiento</figcaption>
         </figure>
         <h3 class="font-semibold text-sm text-gray-500 dark:text-gray-400 mb-3 tracking-wider uppercase border-b border-gray-200 dark:border-gray-800 pb-2">Conserteros (operadores políticos)</h3>
@@ -93,6 +93,7 @@
 import { Users, User, UserX } from '@lucide/vue'
 import { onMounted } from 'vue'
 import { usePageMeta } from '../composables/usePageMeta.js'
+import ImageZoom from '../components/ImageZoom.vue'
 onMounted(() => usePageMeta({
   title: 'Los actores del caso — Relleno sanitario de Corregidora',
   description: 'Empresarios, regidores, conserteros y autoridades ambientales: el mapa de actores detrás del relleno sanitario de Corregidora, Querétaro.',

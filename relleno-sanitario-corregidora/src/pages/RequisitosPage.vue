@@ -38,12 +38,12 @@
     <!-- Fotos de clausura -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg" alt="Sellos de clausura" class="w-full h-56 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos de clausura colocados en el relleno — 21 mayo 2026</figcaption>
+        <ImageZoom :src="clausuraImg" alt="Sellos de clausura colocados en el relleno sanitario de Corregidora el 21 de mayo de 2026" imgClass="h-56 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos de clausura colocados en el relleno — 21 mayo 2026. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg2" alt="Vista del relleno clausurado" class="w-full h-56 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante la inspeccion de los regidores</figcaption>
+        <ImageZoom :src="clausuraImg2" alt="Vista del relleno sanitario clausurado en Praderas de La Loma, Corregidora" imgClass="h-56 object-cover" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante la inspeccion de los regidores. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
       </figure>
     </div>
 
@@ -63,6 +63,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { usePageMeta } from '../composables/usePageMeta.js'
+import ImageZoom from '../components/ImageZoom.vue'
 onMounted(() => usePageMeta({
   title: 'Requisitos legales vs realidad — Relleno sanitario Corregidora',
   description: 'Comparativa de 12 requisitos legales (NOM-083, cambio de uso de suelo, servicios básicos) contra lo que realmente tiene el relleno sanitario de Corregidora.',

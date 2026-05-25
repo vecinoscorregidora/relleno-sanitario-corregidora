@@ -20,14 +20,18 @@
     </div>
 
     <!-- Seal photos -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-2xl">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-2xl">
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg" alt="Sellos de clausura" class="w-full h-48 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos colocados el 21 de mayo de 2026</figcaption>
+        <ImageZoom :src="clausuraImg" alt="Sellos de clausura colocados en el relleno sanitario de Corregidora el 21 de mayo de 2026" imgClass="h-48" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Sellos colocados el 21 de mayo de 2026. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
-        <img :src="clausuraImg2" alt="Vista del relleno" class="w-full h-48 object-cover" loading="lazy" />
-        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante la inspeccion</figcaption>
+        <ImageZoom :src="clausuraImg2" alt="Vista del relleno sanitario de Corregidora durante la inspeccion de los regidores" imgClass="h-48" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante la inspeccion. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
+      </figure>
+      <figure class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900">
+        <ImageZoom :src="recorridoImg" alt="Vista del relleno sanitario de Corregidora durante el recorrido de inspeccion" imgClass="h-48" />
+        <figcaption class="px-4 py-2 text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-900/50">Vista del relleno durante el recorrido. Foto: <a href="https://oem.com.mx/diariodequeretaro/local/relleno-clausurado-en-corregidora-aun-no-tiene-sellos-30080960" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">Armando Vázquez / Diario de Querétaro</a></figcaption>
       </figure>
     </div>
 
@@ -40,6 +44,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { usePageMeta } from '../composables/usePageMeta.js'
+import ImageZoom from '../components/ImageZoom.vue'
 onMounted(() => usePageMeta({
   title: 'Cronología del caso — Relleno Sanitario Corregidora',
   description: 'Línea de tiempo completa del conflicto del relleno sanitario en Corregidora: desde la creación de FSO 3 en 2019 hasta la clausura en mayo 2026.',
@@ -50,6 +55,7 @@ onMounted(() => usePageMeta({
 const base = import.meta.env.BASE_URL
 const clausuraImg = `${base}images/clausura-relleno-sanitario.webp`
 const clausuraImg2 = `${base}images/cluasura-relleno-sanitario-1.webp`
+const recorridoImg = `${base}images/recorrido-basurero-av4.webp`
 const events = [
   { date: '2 Abr 2019', title: 'Constitución de FSO 3 SA de CV', desc: 'Se constituye en Querétaro ante el notario Sergio Zepeda Guerra. Objeto social: servicios de agua potable, drenaje y saneamiento. Capital social: $60,000 MXN. Socios fundadores: José Rodrigo Urquiza Escobar, Salvador Cofiño Dávila y Alejandro García Ibarra (33.3% c/u).', source: 'Acta constitutiva — RPC Querétaro' },
   { date: '4 Feb 2024', title: 'Incendio en relleno sanitario "El Paraíso"', desc: 'Un incendio de casi dos semanas consume el relleno sanitario que operaba en Corregidora desde 2007. El fuego requiere intervención federal, estatal y municipal para ser sofocado.', source: 'Publimetro — 20 Feb 2024' },

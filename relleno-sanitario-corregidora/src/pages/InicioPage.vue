@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection.vue'
 import CaseSection from '../components/CaseSection.vue'
 import { FileText, Users, Search, Clock, Building2, TriangleAlert, ArrowRightLeft, UserPlus, ArrowRight, Play, FileArchive, Scale, ShieldAlert, Info } from '@lucide/vue'
 import { usePageMeta } from '../composables/usePageMeta.js'
+import ImageZoom from '../components/ImageZoom.vue'
 onMounted(() => usePageMeta({
   title: 'Relleno Sanitario Corregidora — Investigación ciudadana',
   description: 'Investigación sobre el relleno sanitario privado instalado a 30 metros de viviendas en Praderas de La Loma, Corregidora, Querétaro. Documentamos la transformación de FSO 3, los actores clave y la clausura del sitio.',
@@ -83,7 +84,7 @@ const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
 
         <!-- Invitacion image -->
         <figure class="mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 float-none sm:float-right sm:ml-4 sm:max-w-xs">
-          <img :src="invitacionImg" alt="Invitacion Jornada Recorregidora" class="w-full h-auto object-contain max-h-48 mx-auto" loading="lazy" />
+          <ImageZoom :src="invitacionImg" alt="Invitacion Jornada Recorregidora" imgClass="max-h-48 object-contain" />
           <figcaption class="px-3 py-1.5 text-[0.6rem] text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-gray-800/50">Invitacion al evento donde Chepe prometio asistir</figcaption>
         </figure>
 
