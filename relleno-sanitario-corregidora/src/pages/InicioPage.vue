@@ -10,7 +10,7 @@ onMounted(() => usePageMeta({
   description: 'Investigación sobre el relleno sanitario privado instalado a 30 metros de viviendas en Praderas de La Loma, Corregidora, Querétaro. Documentamos la transformación de FSO 3, los actores clave y la clausura del sitio.',
   og: { title: 'El relleno de nadie — Investigación sobre el basurero de Corregidora', description: 'Cómo un basurero privado se instaló en medio de comunidades rurales y quiénes están detrás del negocio.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/', image: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/images/clausura-relleno-sanitario.webp', twitterCard: 'summary_large_image', twitterTitle: 'El relleno de nadie — Investigación Corregidora', twitterDescription: 'Basurero privado a 30m de viviendas en Corregidora. Una investigación ciudadana.' },
   canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/',
-  schema: { '@context': 'https://schema.org', '@type': 'Report', headline: 'El relleno de nadie', description: 'Investigación sobre el relleno sanitario privado en Corregidora, Querétaro.', datePublished: '2026-05-24', dateModified: '2026-05-24' }
+  schema: { '@context': 'https://schema.org', '@type': 'Report', headline: 'El relleno de nadie', description: 'Investigación sobre el relleno sanitario privado en Corregidora, Querétaro.', datePublished: '2026-05-24', dateModified: '2026-09-16' }
 }))
 const base = import.meta.env.BASE_URL
 const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
@@ -72,6 +72,14 @@ const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
       </div>
     </div>
 
+    <!-- Actualización septiembre 2026 -->
+    <div class="reveal reveal-delay-2 mb-12">
+      <div class="flex items-start gap-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-5 py-4 rounded-xl">
+        <Info class="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+        <p class="text-xs text-blue-700 dark:text-blue-300 leading-relaxed"><strong>Actualización — septiembre 2026.</strong> El cabildo suspendió la concesión el 14 de mayo; en junio se reportó una posible reapertura si cumple la norma y en julio el plantón continuaba con acciones legales. La prensa identifica a Urquiza Escobar como representante legal de FSO 3; Velasco Merino no aparece nombrada en ningún medio revisado. <router-link to="/cronologia" class="underline font-medium">Ver cronología</router-link> · <router-link to="/fuentes" class="underline font-medium">Ver fuentes</router-link></p>
+      </div>
+    </div>
+
     <!-- Testimonios: Acoso en la Jornada Recorregidora -->
     <div class="reveal reveal-delay-2 mb-12">
       <span class="inline-flex items-center gap-2 text-[0.65rem] font-bold tracking-[0.2em] uppercase text-red-600 dark:text-red-400 mb-4">
@@ -123,7 +131,7 @@ const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
         <router-link to="/cronologia" class="border border-gray-200 dark:border-gray-800 p-4 rounded-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all bg-gray-50/50 dark:bg-gray-900/30 group text-center">
           <Clock class="w-5 h-5 text-blue-600 dark:text-blue-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
           <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Cronología</div>
-          <div class="text-[0.6rem] text-gray-400 dark:text-gray-500 mt-0.5">15 eventos</div>
+          <div class="text-[0.6rem] text-gray-400 dark:text-gray-500 mt-0.5">19 eventos</div>
         </router-link>
 
         <router-link to="/empresa" class="border border-gray-200 dark:border-gray-800 p-4 rounded-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all bg-gray-50/50 dark:bg-gray-900/30 group text-center">
@@ -135,7 +143,7 @@ const invitacionImg = `${base}images/Recorregidora-invitacion.jpeg`
         <router-link to="/actores" class="border border-gray-200 dark:border-gray-800 p-4 rounded-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all bg-gray-50/50 dark:bg-gray-900/30 group text-center">
           <Users class="w-5 h-5 text-blue-600 dark:text-blue-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
           <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Actores</div>
-          <div class="text-[0.6rem] text-gray-400 dark:text-gray-500 mt-0.5">9 perfiles</div>
+          <div class="text-[0.6rem] text-gray-400 dark:text-gray-500 mt-0.5">11 perfiles</div>
         </router-link>
 
         <router-link to="/comunidades" class="border border-gray-200 dark:border-gray-800 p-4 rounded-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all bg-gray-50/50 dark:bg-gray-900/30 group text-center">

@@ -97,14 +97,14 @@ import ImageZoom from '../components/ImageZoom.vue'
 onMounted(() => usePageMeta({
   title: 'Los actores del caso — Relleno sanitario de Corregidora',
   description: 'Empresarios, regidores, conserteros y autoridades ambientales: el mapa de actores detrás del relleno sanitario de Corregidora, Querétaro.',
-  og: { title: 'Actores — Quién es quién en el caso del relleno de Corregidora', description: '9 perfiles clave identificados en el conflicto del relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/actores' },
+  og: { title: 'Actores — Quién es quién en el caso del relleno de Corregidora', description: '11 perfiles clave identificados en el conflicto del relleno sanitario de Corregidora.', url: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/actores' },
   canonical: 'https://vecinoscorregidora.github.io/relleno-sanitario-corregidora/actores'
 }))
 const base = import.meta.env.BASE_URL
 const invitacionImg = `${base}images/Recorregidora-invitacion.webp`
 const empresarios = [
-  { role: 'Dueño de FSO 3 / Administrador Único', name: 'José Rodrigo Urquiza Escobar', detail: 'RFC: UUER751004IP0. Copropietario de FSO 3 (50%). Perfil de negocios que abarca agua, desarrollo inmobiliario y clubes privados. Representante legal de FSO 3.' },
-  { role: 'Socia / Apoderada Legal de FSO 3', name: 'Kikey Velasco Merino', detail: 'RFC: VEMK871011B82. Abogada, nacida el 11 oct 1987. Entró como socia el 4 mar 2024, 8 días antes del cambio de objeto social a residuos.' },
+  { role: 'Dueño de FSO 3 / Administrador Único', name: 'José Rodrigo Urquiza Escobar', detail: 'RFC: UUER751004IP0. Copropietario de FSO 3 (50%) y su representante legal. La prensa lo nombra así (VisionQro, Próxima Parada) y señala a la empresa como propietaria del predio. Preside el Club Campestre de Querétaro. Figura como codemandado junto a García Ibarra en el expediente mercantil T. 721-2022-001 (Boletín Judicial CDMX). El vínculo con la operadora privada de agua no está probado: otra fuente documenta otros propietarios.' },
+  { role: 'Socia / Apoderada Legal de FSO 3', name: 'Kikey Velasco Merino', detail: 'RFC: VEMK871011B82. Abogada, nacida el 11 oct 1987. Entró el 4 mar 2024: compró 10,000 acciones a García Ibarra y 20,000 a Cofiño Dávila por $30,000. Ocho días después, la empresa cambió su objeto a residuos. Ningún medio revisado la nombra; su único rastro documental son los instrumentos del RPC.' },
 ]
 const gobierno = [
   { role: 'Presidente Municipal de Corregidora', name: 'Josué David "Chepe" Guerrero Trápala', detail: 'Presidente municipal en funciones. Defiende la legalidad del relleno. El 20 de mayo de 2026 promocionó la Jornada Recorregidora en Candiles pero no asistió. Tres representantes que buscaban dialogar con él fueron recibidos por conserteros que los hostigaron.' },

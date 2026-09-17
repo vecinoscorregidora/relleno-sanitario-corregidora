@@ -71,6 +71,27 @@
       </table>
     </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="border border-gray-200 dark:border-gray-800 p-6 rounded-xl bg-gray-50/50 dark:bg-gray-900/30">
+        <h4 class="text-[0.65rem] font-bold tracking-widest uppercase text-blue-700 dark:text-blue-400 mb-3">Cómo se repartieron las acciones</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">García Ibarra dividió sus 20,000 acciones: 10,000 para Urquiza Escobar y 10,000 para Velasco Merino. Cofiño Dávila vendió sus 20,000 completas a Velasco Merino. Ambos pagaron en el acto y el acta quedó como recibo. Resultado: 30,000 acciones para cada socio antes del aumento a 10 millones.</p>
+      </div>
+      <div class="border border-gray-200 dark:border-gray-800 p-6 rounded-xl bg-gray-50/50 dark:bg-gray-900/30">
+        <h4 class="text-[0.65rem] font-bold tracking-widest uppercase text-blue-700 dark:text-blue-400 mb-3">La notaría</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Ambas asambleas de 2024 se formalizaron ante Humberto Palacios Kuri, notario 65 de Querétaro, titular desde 2022 y presidente del Consejo de Notarios. La constitución de 2019 fue ante el notario 16, Sergio Zepeda Guerra.</p>
+      </div>
+    </div>
+
+    <div class="border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-900/20 px-5 py-4 max-w-3xl mb-8">
+      <div class="flex items-start gap-3">
+        <Users class="w-5 h-5 text-orange-600 dark:text-orange-400 shrink-0 mt-0.5" />
+        <div>
+          <h4 class="font-bold text-orange-700 dark:text-orange-400 text-sm mb-1">Lo que dice la prensa sobre los socios</h4>
+          <p class="text-sm text-orange-800 dark:text-orange-200/80 leading-relaxed">VisionQro y Próxima Parada identifican a Urquiza Escobar como representante legal de FSO 3 y a la empresa como propietaria del predio. Urquiza preside el Club Campestre de Querétaro y figura como codemandado junto a García Ibarra en el expediente mercantil T. 721-2022-001 (Boletín Judicial CDMX); lo verificable es su presencia en el expediente, no una responsabilidad. El vínculo con la operadora privada de agua no está probado: Tribuna documenta otros propietarios. Velasco Merino no aparece nombrada en ningún medio revisado.</p>
+        </div>
+      </div>
+    </div>
+
     <h3 class="font-display text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
       <FileSearch class="w-5 h-5 text-blue-600 dark:text-blue-400" />
       Documentos originales

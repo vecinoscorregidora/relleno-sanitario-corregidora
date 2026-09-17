@@ -49,5 +49,11 @@ const sources = [
   { title: 'Relleno sanitario en Corregidora opera con autorización vigente', url: 'https://inqro.com.mx/2026/04/24/relleno-sanitario-en-corregidora-opera-con-autorizacion-vigente-informa-procurador-ambiental/', source: 'InQro', date: '24 Abr 2026' },
   { title: 'Corregidora proyecta relleno sanitario propio', url: 'https://queretaro.quadratin.com.mx/corregidora-proyecta-relleno-sanitario-propio-antes-de-concluir-la-administracion/', source: 'Quadratín Querétaro', date: '1 Feb 2026' },
   { title: 'Negará Corregidora licencia a relleno El Paraíso', url: 'https://www.publimetro.com.mx/queretaro/2024/02/20/corregidora-no-renovara-licencia-del-relleno-el-paraiso/', source: 'Publimetro', date: '20 Feb 2024' },
+  { title: 'Se ampara particular contra clausura del relleno sanitario de Corregidora', url: 'https://queretaro.quadratin.com.mx/se-ampara-particular-contra-clausura-del-relleno-sanitario-de-corregidora/', source: 'Quadratín Querétaro', date: '23 Abr 2026' },
+  { title: 'Cartel de la basura: concesionario del basurero en Corregidora y sus otros negocios', url: 'https://proximaparada.com.mx/2026/04/24/cartel-de-la-basura-concesionario-del-basurero-en-corregidora-y-sus-otros-negocios/', source: 'Próxima Parada', date: '24 Abr 2026' },
+  { title: 'Aprueban retiro de concesión de relleno sanitario de Corregidora', url: 'https://codigoqro.mx/nota/local/2026/05/14/aprueban-retiro-concesion-relleno-sanitario-corregidora', source: 'CódigoQro', date: '14 May 2026' },
+  { title: 'Relleno sanitario de Corregidora podría reabrir si cumple norma ambiental', url: 'https://oem.com.mx/diariodequeretaro/local/relleno-sanitario-de-corregidora-podria-reabrir-si-cumple-norma-ambiental-30670481', source: 'Diario de Querétaro', date: '21 Jun 2026' },
+  { title: 'Vecinos mantienen plantón contra tiradero en Corregidora', url: 'https://portalred365.com.mx/2026/07/vecinos-mantienen-planton-contra-tiradero-en-corregidora-y-responsabilizan-a-autoridades-ante-posibles-represalias/', source: 'Red365', date: '17 Jul 2026' },
+  { title: 'Querétaro no es como lo pintan', url: 'https://www.visionqro.mx/analisis/queretaro-no-es-como-lo-pintan/', source: 'VisionQro', date: '2 Jun 2026' },
 ]
 </script>

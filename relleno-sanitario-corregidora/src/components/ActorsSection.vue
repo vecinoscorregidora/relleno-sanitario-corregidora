@@ -21,8 +21,8 @@
 <script setup>
 import { Users } from '@lucide/vue'
 const players = [
-  { role: 'Dueño de FSO 3 / Administrador Único', name: 'José Rodrigo Urquiza Escobar', detail: 'RFC: UUER751004IP0. Copropietario (50%). Perfil que abarca agua, desarrollo inmobiliario y clubes privados.' },
-  { role: 'Socia / Apoderada Legal de FSO 3', name: 'Kikey Velasco Merino', detail: 'RFC: VEMK871011B82. Abogada. Entró como socia días antes del cambio de objeto social. Tiene poder general para pleitos, administración y dominio.' },
+  { role: 'Dueño de FSO 3 / Administrador Único', name: 'José Rodrigo Urquiza Escobar', detail: 'RFC: UUER751004IP0. Copropietario (50%) y representante legal. Preside el Club Campestre. Codemandado en el expediente T. 721-2022-001 (CDMX).' },
+  { role: 'Socia / Apoderada Legal de FSO 3', name: 'Kikey Velasco Merino', detail: 'RFC: VEMK871011B82. Abogada. Compró 10,000 acciones a García Ibarra y 20,000 a Cofiño. Ningún medio la nombra; solo consta en el RPC.' },
   { role: 'Presidente Municipal de Corregidora', name: 'Josué David "Chepe" Guerrero Trápala', detail: 'Defiende la legalidad del relleno. Busca construir relleno municipal propio.' },
   { role: 'Secretaria de Gobierno (Corregidora)', name: 'Cristina Fernández de Cevallos', detail: 'Encabezó reunión con vecinos. Informó denuncias penales de la empresa contra manifestantes.' },
   { role: 'Procurador Ambiental del Estado', name: 'José Luis Peña Ríos', detail: 'Confirmó autorización vigente hasta ago 2025. No ha recibido denuncias formales ambientales.' },

@@ -70,6 +70,7 @@
         </tbody>
       </table>
     </div>
+    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mt-3">García Ibarra dividió sus 20,000 acciones (10,000 para cada socio) y Cofiño vendió sus 20,000 completas a Velasco Merino. Ambas asambleas se protocolizaron ante el notario 65, Humberto Palacios Kuri.</p>
   </section>
 </template>
 

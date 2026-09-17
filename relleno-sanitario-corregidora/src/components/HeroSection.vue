@@ -32,7 +32,7 @@ const isDark = useDark()
       </div>
 
       <div class="mt-12 flex gap-6 flex-wrap justify-center text-[0.65rem] font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500">
-        <span>24 de mayo, 2026</span>
+        <span>Septiembre, 2026</span>
       </div>
     </div>
   </section>

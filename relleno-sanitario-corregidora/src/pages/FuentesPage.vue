@@ -37,6 +37,20 @@
     </ul>
 
     <h3 class="font-display text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+      <Scale class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+      Boletines judiciales y notariales
+    </h3>
+    <ul class="space-y-1 mb-10">
+      <li v-for="j in judicial" :key="j.title" class="py-3 border-b border-gray-100 dark:border-gray-800">
+        <a :href="j.url" target="_blank" rel="noopener" class="text-blue-700 dark:text-blue-400 hover:underline text-sm font-medium flex items-start gap-2">
+          <ExternalLink class="w-3.5 h-3.5 shrink-0 mt-0.5" />
+          <span>{{ j.title }}</span>
+        </a>
+        <span class="block text-xs text-gray-400 dark:text-gray-500 mt-0.5 ml-5.5">{{ j.source }} — {{ j.date }}</span>
+      </li>
+    </ul>
+
+    <h3 class="font-display text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
       <Video class="w-5 h-5 text-blue-600 dark:text-blue-400" />
       Reportajes audiovisuales
     </h3>
@@ -57,7 +71,7 @@
 </template>
 
 <script setup>
-import { FileText, File, FileArchive, Newspaper, ExternalLink, Video } from '@lucide/vue'
+import { FileText, File, FileArchive, Newspaper, ExternalLink, Video, Scale } from '@lucide/vue'
 import { onMounted } from 'vue'
 import { usePageMeta } from '../composables/usePageMeta.js'
 onMounted(() => usePageMeta({
@@ -79,5 +93,23 @@ const sources = [
   { title: 'Relleno sanitario en Corregidora opera con autorización vigente', url: 'https://inqro.com.mx/2026/04/24/relleno-sanitario-en-corregidora-opera-con-autorizacion-vigente-informa-procurador-ambiental/', source: 'InQro', date: '24 Abr 2026' },
   { title: 'Corregidora proyecta relleno sanitario propio', url: 'https://queretaro.quadratin.com.mx/corregidora-proyecta-relleno-sanitario-propio-antes-de-concluir-la-administracion/', source: 'Quadratín Querétaro', date: '1 Feb 2026' },
   { title: 'Negará Corregidora licencia a relleno El Paraíso', url: 'https://www.publimetro.com.mx/queretaro/2024/02/20/corregidora-no-renovara-licencia-del-relleno-el-paraiso/', source: 'Publimetro', date: '20 Feb 2024' },
+  { title: 'Cartel de la basura: concesionario del basurero en Corregidora y sus otros negocios', url: 'https://proximaparada.com.mx/2026/04/24/cartel-de-la-basura-concesionario-del-basurero-en-corregidora-y-sus-otros-negocios/', source: 'Próxima Parada', date: '24 Abr 2026' },
+  { title: 'Se ampara particular contra clausura del relleno sanitario de Corregidora', url: 'https://queretaro.quadratin.com.mx/se-ampara-particular-contra-clausura-del-relleno-sanitario-de-corregidora/', source: 'Quadratín Querétaro', date: '23 Abr 2026' },
+  { title: 'Clausurado el relleno sanitario de Corregidora, se mantiene litigio por amparo', url: 'https://www.reqronexion.com/clausurado-el-relleno-sanitario-de-corregidora-se-mantiene-litigio-por-amparo/', source: 'Reqronexion', date: '20 Abr 2026' },
+  { title: 'Relleno sanitario clausurado en Corregidora sigue sin cumplir medidas ambientales para reabrir', url: 'https://www.reqronexion.com/relleno-sanitario-clausurado-en-corregidora-sigue-sin-cumplir-medidas-ambientales-para-reabrir/', source: 'Reqronexion', date: '19 Jun 2026' },
+  { title: 'Procuraduría Ambiental aclara situación de rellenos sanitarios en Corregidora', url: 'https://crettaro.info/procuraduria-ambiental-aclara-situacion-de-rellenos-sanitarios-en-corregidora/', source: 'Crettaro', date: '24 Abr 2026' },
+  { title: 'Corregidora suspende concesión del relleno sanitario de Ejido de Lourdes', url: 'https://aldialogo.mx/municipio-de-corregidora/2026/05/14/corregidora-suspende-concesion-del-relleno-sanitario-de-ejido-de-lourdes', source: 'Al Diálogo', date: '14 May 2026' },
+  { title: 'Aprueban retiro de concesión de relleno sanitario de Corregidora', url: 'https://codigoqro.mx/nota/local/2026/05/14/aprueban-retiro-concesion-relleno-sanitario-corregidora', source: 'CódigoQro', date: '14 May 2026' },
+  { title: 'Ayuntamiento de Corregidora aprueba suspensión de concesión de relleno sanitario en Praderas de Lourdes', url: 'https://noticiaselpueblito.com/ayuntamiento-de-corregidora-aprueba-suspension-de-concesion-de-relleno-sanitario-en-praderas-de-lourdes/', source: 'Noticias del Pueblito', date: '14 May 2026' },
+  { title: 'Relleno sanitario de Corregidora podría reabrir si cumple norma ambiental', url: 'https://oem.com.mx/diariodequeretaro/local/relleno-sanitario-de-corregidora-podria-reabrir-si-cumple-norma-ambiental-30670481', source: 'Diario de Querétaro', date: '21 Jun 2026' },
+  { title: 'Vecinos mantienen plantón contra tiradero en Corregidora y responsabilizan a autoridades ante posibles represalias', url: 'https://portalred365.com.mx/2026/07/vecinos-mantienen-planton-contra-tiradero-en-corregidora-y-responsabilizan-a-autoridades-ante-posibles-represalias/', source: 'Red365', date: '17 Jul 2026' },
+  { title: 'Querétaro no es como lo pintan', url: 'https://www.visionqro.mx/analisis/queretaro-no-es-como-lo-pintan/', source: 'VisionQro', date: '2 Jun 2026' },
+  { title: 'Diputado Gilberto Herrera declara sobre el cambio de uso de suelo', url: 'https://losgrillossg.com/archivos/23458', source: 'Los Grillos SG', date: '23 Abr 2026' },
+  { title: 'Rodrigo Urquiza, presidente del Club Campestre de Querétaro', url: 'https://turistampa.com/new/index.php?Itemid=113&id=12480&option=com_content&view=article', source: 'Turistampa', date: '5 Sep 2025' },
+  { title: 'Denuncian fraude de viviendas en San Miguel de Allende', url: 'https://www.adn40.mx/mexico/denuncian-fraude-viviendas-san-miguel-de-allende-hcj', source: 'adn40', date: '5 May 2022' },
+]
+const judicial = [
+  { title: 'Boletines judiciales del expediente T. 721-2022-001 (Banco del Bajío contra Condominio Residencial El Milagro y otros)', url: 'https://gestordocumental.poderjudicialcdmx.gob.mx/volumen3/Estructuras/TSJ/boletines/1/2/150/171/181/pdf_jCZ0ixTTkZ.pdf', source: 'Poder Judicial de la CDMX', date: '2023-2024' },
+  { title: 'Directorio y directiva del notariado queretano (Notaría 65, Humberto Palacios Kuri)', url: 'https://notariadoqueretano.org.mx/directiva', source: 'Consejo de Notarios de Querétaro', date: 's. f.' },
 ]
 </script>

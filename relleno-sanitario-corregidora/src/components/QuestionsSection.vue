@@ -27,7 +27,7 @@ const questions = [
   { q: '¿Quién autorizó el cambio de uso de suelo?', detail: 'El terreno requería autorización de cambio de uso de suelo. ¿Qué dependencia lo aprobó y con base en qué estudios?' },
   { q: '¿Hay relación entre la llegada de Kikey Velasco y la concesión?', detail: 'Entró a FSO 3 el 4 mar 2024. Ocho días después, la empresa cambió su objeto a residuos. ¿Sabía ya de la oportunidad de negocio?' },
   { q: '¿Quién otorgó la concesión municipal?', detail: 'El relleno requiere autorización municipal. ¿Hubo licitación? ¿Quién firmó y cuáles fueron sus términos?' },
-  { q: '¿Qué vínculo hay entre Urquiza y el gobierno municipal?', detail: 'Tiene negocios en agua, desarrollo inmobiliario y clubes privados. ¿Ha tenido contratos previos con Corregidora?' },
+  { q: '¿Qué vínculo hay entre Urquiza y el gobierno municipal?', detail: 'Preside el Club Campestre. Codemandado en el expediente T. 721-2022-001 (CDMX). ¿Ha tenido contratos previos con Corregidora?' },
   { q: '¿La MIA consideró a las comunidades?', detail: 'La Manifestación de Impacto Ambiental fue otorgada por 5 años. ¿Incluyó consulta pública? ¿Consideró la cercanía a viviendas?' },
   { q: '¿Hay conflicto de interés en procuración ambiental?', detail: 'La Procuraduría dice no haber recibido denuncias formales pese a cobertura mediática. ¿Omisión o filtro institucional?' },
   { q: '¿El relleno recibe solo residuos urbanos?', detail: 'El objeto social de FSO 3 incluye residuos peligrosos. La autoridad dice que solo maneja RSU. ¿Hay verificación?' },

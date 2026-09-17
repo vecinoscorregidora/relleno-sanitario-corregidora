@@ -29,5 +29,6 @@ const events = [
   { date: 'Feb 2026', title: 'Municipio proyecta su propio relleno', desc: 'Josué Guerrero Trápala anuncia plan para construir relleno sanitario municipal. En evaluación técnica.' },
   { date: 'Abr 2026', title: 'Estallido del conflicto social', desc: 'Vecinos de Praderas de La Loma denuncian olores y plagas. El relleno está a 30 metros de viviendas. La empresa presenta denuncias penales.' },
   { date: 'May 2026', title: '150 toneladas diarias a Querétaro', desc: 'Por el conflicto, Corregidora desvía 150 t/día de residuos al relleno de Mompaní. Esperan resolución legal.' },
+  { date: '14 May 2026', title: 'Cabildo suspende la concesión', desc: 'El cabildo aprueba por unanimidad suspender la concesión del predio del Ejido de Lourdes. Se contrata a Veolia en emergencia. En junio se reporta una posible reapertura si cumple la norma.' },
 ]
 </script>

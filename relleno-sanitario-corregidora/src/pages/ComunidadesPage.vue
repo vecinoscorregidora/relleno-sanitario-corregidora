@@ -57,6 +57,7 @@
         <div>
           <h4 class="font-bold text-orange-700 dark:text-orange-400 text-sm mb-1">Contradicción clave</h4>
           <p class="text-sm text-orange-800 dark:text-orange-200/80 leading-relaxed">El municipio califica las viviendas como "irregulares" para cuestionar las quejas, pero el mismo municipio autorizó que un confinamiento de residuos opere junto a esas viviendas. La NOM-083 exige distancias mínimas de seguridad que no se cumplen.</p>
+          <p class="text-sm text-orange-800 dark:text-orange-200/80 leading-relaxed mt-2"><strong>Estado actual:</strong> el cabildo suspendió la concesión el 14 de mayo de 2026; en junio se reportó una posible reapertura si cumple la norma y en julio el plantón continuaba con acciones legales en curso.</p>
         </div>
       </div>
     </div>
